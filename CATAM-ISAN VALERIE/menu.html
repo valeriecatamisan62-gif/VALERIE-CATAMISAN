@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu | The Tea Bar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #1c1c1c;
+      color: #fff;
+      padding: 40px 60px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #d4a373;
+    }
+
+    h1 {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .card {
+      background: #2b2b2b;
+      padding: 20px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .add-to-cart {
+      background-color: #f4a261;
+      color: #fff;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+      background-color: #e76f51;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+
+      .card img {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">THE TEA BAR</div>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="menu.html">MENU</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="login.html">LOGIN</a>
+    </nav>
+  </header>
+
+  <h1>Our Signature Sips</h1>
+
+  <div class="menu-grid">
+    <div class="card">
+      <img src="ube.jpg" alt="Ube Dream Delight">
+      <h3>Ube Dream Delight</h3>
+      <p>Our timeless favorite.</p>
+      <div class="price">₱75.00</div>
+      <button class="add-to-cart" onclick="addToCart('Ube Dream Delight', 5.50)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="matcha-boba-tea-5.jpg" alt="Matcha Boba">
+      <h3>Matcha Boba</h3>
+      <p>Earthy & sweet.</p>
+      <div class="price">₱80.00</div>
+      <button class="add-to-cart" onclick="addToCart('Matcha Boba', 6.00)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="rosemilk.jpg" alt="Rose Milk">
+      <h3>Rose Milk</h3>
+      <p>Fragrant & soothing.</p>
+      <div class="price">₱85.00</div>
+      <button class="add-to-cart" onclick="addToCart('Rose Milk', 5.75)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="berryrefresher.jpg" alt="Berry Refresher">
+      <h3>Berry Refresher</h3>
+      <p>Fruity & light.</p>
+      <div class="price">₱90.00</div>
+      <button class="add-to-cart" onclick="addToCart('Berry Refresher', 6.25)">Add to Cart</button>
+    </div>
+  </div>
+
+  <script>
+    function addToCart(item, price) {
+      alert(`${item} ($${price.toFixed(2)}) added to your cart!`);
+      // You can later store it in localStorage or send to backend
+    }
+  </script>
+
+</body>
+</html>
